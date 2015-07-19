@@ -7,3 +7,13 @@ export PATH=$PATH:$HOME/bin
 
 ####
 # put any bash/zsh customizations in here
+
+alias ll='ls -l -h'
+alias la='ls -A'
+alias l='ls -al'
+alias ..='cd ..'
+alias ...='cd ../../'
+alias df='df -h'
+alias du='du -h'
+
+
