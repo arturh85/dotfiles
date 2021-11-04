@@ -1,0 +1,19 @@
+# Alias definitions
+if [ -f ~/.bash_aliases.sh ]; then
+    . ~/.bash_aliases.sh
+fi
+if [ -f ~/.bash_aliases_local.sh ]; then
+    . ~/.bash_aliases_local.sh
+fi
+
+# Export definitions
+if [ -f ~/.bash_exports.sh ]; then
+    . ~/.bash_exports.sh
+fi
+if [ -f ~/.bash_exports_local.sh ]; then
+    . ~/.bash_exports_local.sh
+fi
+
+source ~/.config/zsh/zsh-autosuggestions/zsh-autosuggestions.zsh
+source ~/.config/zsh/zsh-syntax-highlighting/zsh-syntax-highlighting.zsh
+eval "$(oh-my-posh --init --shell zsh --config ~/.ohmyposh.json)"
