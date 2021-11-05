@@ -1,3 +1,8 @@
+setopt hist_ignore_all_dups inc_append_history
+HISTFILE=~/.zhistory
+HISTSIZE=4096
+SAVEHIST=4096
+
 # Alias definitions
 if [ -f ~/.bash_aliases.sh ]; then
     . ~/.bash_aliases.sh
@@ -8,7 +13,7 @@ fi
 
 # Export definitions
 if [ -f ~/.bash_exports.sh ]; then
-    source ~/.bash_exports.sh
+    . ~/.bash_exports.sh
 fi
 if [ -f ~/.bash_exports_local.sh ]; then
     . ~/.bash_exports_local.sh
