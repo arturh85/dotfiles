@@ -25,3 +25,11 @@ Install
 -------
 
 `$ sh -c "$(curl -fsLS git.io/chezmoi)" -- init --apply arturh85`
+
+
+Credits
+-------
+
+- [jayharris/dotfiles-windows](https://github.com/jayharris/dotfiles-windows)
+- [thoughtbot/dotfiles](https://github.com/thoughtbot/dotfiles)
+
