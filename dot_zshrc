@@ -4,28 +4,18 @@ HISTSIZE=4096
 SAVEHIST=4096
 
 # Alias definitions
-if [ -f ~/.config/zsh/aliases.sh ]; then
-    . ~/.config/zsh/aliases.sh
-fi
+. ~/.config/zsh/aliases.sh
 if [ -f ~/.config/zsh/aliases_local.sh ]; then
     . ~/.config/zsh/aliases_local.sh
 fi
 
 # Export definitions
-if [ -f ~/.config/zsh/exports.sh ]; then
-    . ~/.config/zsh/exports.sh
-fi
+. ~/.config/zsh/exports.sh
 if [ -f ~/.config/zsh/exports_local.sh ]; then
     . ~/.config/zsh/exports_local.sh
 fi
 
-g() {
-  if [[ $# -gt 0 ]]; then
-    git "$@"
-  else
-    git status
-  fi
-}
+. ~/.config/zsh/functions.sh
 
 # keybindings, source: https://github.com/thoughtbot/dotfiles/blob/main/zsh/configs/keybindings.zsh
 # give us access to ^Q
