@@ -33,7 +33,7 @@ if ($host.Name -eq 'ConsoleHost')
 }
 Import-Module -Name Terminal-Icons
 
-oh-my-posh --init --shell pwsh --config $HOME\.ohmyposh.json | Invoke-Expression
+oh-my-posh --init --shell pwsh --config $HOME\.config\ohmyposh\config.json | Invoke-Expression
 
 Set-Alias -Name l -Value ls
 Set-Alias -Name ll -Value ls
