@@ -1,4 +1,4 @@
 README.md
 {{- if ne .chezmoi.os "windows" }}
-Documents # only manage Documents on work-laptop
+Documents # only manage Documents on windows
 {{- end }}
