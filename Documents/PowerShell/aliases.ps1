@@ -13,9 +13,6 @@ ${function:dt} = { Set-Location ~\Desktop }
 ${function:docs} = { Set-Location ~\Documents }
 ${function:dl} = { Set-Location ~\Downloads }
 
-# Missing Bash aliases
-Set-Alias time Measure-Command
-
 # Correct PowerShell Aliases if tools are available (aliases win if set)
 # WGet: Use `wget.exe` if available
 if (Get-Command wget.exe -ErrorAction SilentlyContinue | Test-Path) {
@@ -67,10 +64,12 @@ Set-Alias cleandisks Clean-Disks
 # Reload the shell
 Set-Alias reload Reload-Powershell
 
-# Update installed Ruby Gems, NPM, and their installed packages.
+# Update Windows, NPM, and their installed packages.
 Set-Alias update System-Update
 
-Set-Alias -Name l -Value ls
-Set-Alias -Name ll -Value ls
-Set-Alias -Name vi -Value nvim
-Set-Alias -Name c -Value chezmoi.exe
+# Missing Bash aliases
+Set-Alias time Measure-Command
+Set-Alias l ls
+Set-Alias ll ls
+Set-Alias vi nvim
+Set-Alias c chezmoi.exe

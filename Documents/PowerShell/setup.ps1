@@ -12,7 +12,7 @@ if (!(Verify-Elevated)) {
 
 ### Update Help for Modules
 Write-Host "Updating Help..." -ForegroundColor "Yellow"
-Update-Help -Force
+Update-Help -Force | Out-Null
 
 
 ### Package Providers
