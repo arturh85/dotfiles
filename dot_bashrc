@@ -36,19 +36,19 @@ if [ -z "${debian_chroot:-}" ] && [ -r /etc/debian_chroot ]; then
 fi
 
 # Alias definitions
-if [ -f ~/.bash_aliases.sh ]; then
-    . ~/.bash_aliases.sh
+if [ -f ~/.config/zsh/aliases.sh ]; then
+    . ~/.config/zsh/aliases.sh
 fi
-if [ -f ~/.bash_aliases_local.sh ]; then
-    . ~/.bash_aliases_local.sh
+if [ -f ~/.config/zsh/aliases_local.sh ]; then
+    . ~/.config/zsh/aliases_local.sh
 fi
 
 # Export definitions
-if [ -f ~/.bash_exports.sh ]; then
-    . ~/.bash_exports.sh
+if [ -f ~/.config/zsh/exports.sh ]; then
+    . ~/.config/zsh/exports.sh
 fi
-if [ -f ~/.bash_exports_local.sh ]; then
-    . ~/.bash_exports_local.sh
+if [ -f ~/.config/zsh/exports_local.sh ]; then
+    . ~/.config/zsh/exports_local.sh
 fi
 
 # enable programmable completion features (you don't need to enable

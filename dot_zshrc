@@ -4,19 +4,19 @@ HISTSIZE=4096
 SAVEHIST=4096
 
 # Alias definitions
-if [ -f ~/.bash_aliases.sh ]; then
-    . ~/.bash_aliases.sh
+if [ -f ~/.config/zsh/aliases.sh ]; then
+    . ~/.config/zsh/aliases.sh
 fi
-if [ -f ~/.bash_aliases_local.sh ]; then
-    . ~/.bash_aliases_local.sh
+if [ -f ~/.config/zsh/aliases_local.sh ]; then
+    . ~/.config/zsh/aliases_local.sh
 fi
 
 # Export definitions
-if [ -f ~/.bash_exports.sh ]; then
-    . ~/.bash_exports.sh
+if [ -f ~/.config/zsh/exports.sh ]; then
+    . ~/.config/zsh/exports.sh
 fi
-if [ -f ~/.bash_exports_local.sh ]; then
-    . ~/.bash_exports_local.sh
+if [ -f ~/.config/zsh/exports_local.sh ]; then
+    . ~/.config/zsh/exports_local.sh
 fi
 
 # keybindings, source: https://github.com/thoughtbot/dotfiles/blob/main/zsh/configs/keybindings.zsh
