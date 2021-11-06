@@ -8,8 +8,6 @@
 	path = ~/.config/git/gitconfig-neusta
 [commit]
 	gpgsign = true
-[gpg]
-	program = /usr/bin/gpg
 [push]
 	default = current
 [init]
