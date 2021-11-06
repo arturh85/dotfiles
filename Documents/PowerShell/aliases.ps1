@@ -73,3 +73,6 @@ Set-Alias l ls
 Set-Alias ll ls
 Set-Alias vi nvim
 Set-Alias c chezmoi.exe
+
+# chezmoi cd spawns cmd.exe
+${function:ccd} = { Set-Location $HOME\.local\share\chezmoi } 
