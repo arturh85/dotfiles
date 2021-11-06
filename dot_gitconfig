@@ -2,13 +2,23 @@
 	name = Artur Hallmann
 	email = arturh@arturh.de
 [includeIf "gitdir:~/projects/tui/"]
-  	path = .gitconfig-neusta
+	path = .gitconfig-tui
 [includeIf "gitdir:~/projects/neusta/"]
-  	path = .gitconfig-tui
+	path = .gitconfig-neusta
 [push]
-    default = current
+	default = current
+[init]
+	defaultBranch = main
+[core]
+	autocrlf = input
+[merge]
+	ff = only
+[include]
+	path = ~/.gitconfig.local
+[rebase]
+	autosquash = true
 [apply]
-    whitespace = fix
+	whitespace = fix
 [branch]
 	autosetuprebase = remote
 [alias]
