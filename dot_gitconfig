@@ -1,16 +1,22 @@
 [user]
 	name = Artur Hallmann
 	email = arturh@arturh.de
+	signingkey = BB47A259E7E7B53A
 [includeIf "gitdir:~/projects/tui/"]
 	path = ~/.config/git/gitconfig-tui
 [includeIf "gitdir:~/projects/neusta/"]
 	path = ~/.config/git/gitconfig-neusta
+[commit]
+	gpgsign = true
+[gpg]
+	program = /usr/bin/gpg
 [push]
 	default = current
 [init]
 	defaultBranch = main
 [core]
 	autocrlf = false
+
 [merge]
 	ff = only
 [include]
