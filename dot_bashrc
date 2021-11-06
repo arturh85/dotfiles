@@ -62,4 +62,4 @@ if ! shopt -oq posix; then
   fi
 fi
 
-eval "$(oh-my-posh --init --shell bash --config ~/.ohmyposh.json)"
+eval "$(oh-my-posh --init --shell bash --config ~/.config/ohmyposh/config.json)"
