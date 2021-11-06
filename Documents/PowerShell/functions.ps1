@@ -16,15 +16,20 @@ function sudo() {
     }
 }
 
-# System Update - Update RubyGems, NPM, and their installed packages
+# System Update - Update Windows, NPM, and their installed packages
 function System-Update() {
+    Write-Host "Updating Windows..." -ForegroundColor "Yellow"
     Install-WindowsUpdate -IgnoreUserInput -IgnoreReboot -AcceptAll
+    Write-Host "Updating Modules..." -ForegroundColor "Yellow"
     Update-Module
-    Update-Help -Force
-    gem update --system
-    gem update
+    # Write-Host "Updating Help..." -ForegroundColor "Yellow"
+    # Update-Help -Force | Out-Null
+    Write-Host "Updating Choco Packages..." -ForegroundColor "Yellow"
+    choco update
+    Write-Host "Updating NPM..." -ForegroundColor "Yellow"
     npm install npm -g
     npm update -g
+    Write-Host "Updates finished." -ForegroundColor "Green"
 }
 
 # Reload the Shell
