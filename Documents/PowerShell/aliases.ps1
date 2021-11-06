@@ -72,6 +72,7 @@ Set-Alias time Measure-Command
 Set-Alias l ls
 Set-Alias ll ls
 Set-Alias vi nvim
+Set-Alias g Git-StatusOrCommand
 Set-Alias c chezmoi.exe
 
 # chezmoi cd spawns cmd.exe

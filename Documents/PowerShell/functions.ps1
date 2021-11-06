@@ -25,10 +25,10 @@ function System-Update() {
     # Write-Host "Updating Help..." -ForegroundColor "Yellow"
     # Update-Help -Force
     Write-Host "Updating Choco Packages..." -ForegroundColor "Yellow"
-    choco update
+    choco update all
     Write-Host "Updating NPM..." -ForegroundColor "Yellow"
-    npm install npm -g
-    npm update -g
+    npm install npm -g --loglevel error
+    npm update -g --loglevel error
     Write-Host "Updates finished!" -ForegroundColor "Green"
 }
 
@@ -345,6 +345,14 @@ function Reset-AllBashShortcuts {
         "$ENV:USERPROFILE\AppData\Roaming\Microsoft\Internet Explorer\Quick Launch\User Pinned\TaskBar",`
         "$ENV:USERPROFILE\AppData\Roaming\Microsoft\Windows\Start Menu\Programs"`
     ) | ForEach { Reset-BashShortcut $_ }
+}
+
+function Git-StatusOrCommand {
+    if ($args.Length -gt 0) {
+        git $args[0..$args.Length] 
+    } else { 
+        git status
+    }
 }
 
 function Convert-ConsoleColor {
