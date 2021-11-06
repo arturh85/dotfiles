@@ -19,6 +19,14 @@ if [ -f ~/.config/zsh/exports_local.sh ]; then
     . ~/.config/zsh/exports_local.sh
 fi
 
+g() {
+  if [[ $# -gt 0 ]]; then
+    git "$@"
+  else
+    git status
+  fi
+}
+
 # keybindings, source: https://github.com/thoughtbot/dotfiles/blob/main/zsh/configs/keybindings.zsh
 # give us access to ^Q
 stty -ixon
