@@ -1,0 +1,28 @@
+[user]
+	name = Artur Hallmann
+	email = arturh@arturh.de
+[includeIf "gitdir:~/projects/tui/"]
+  	path = .gitconfig-neusta
+[includeIf "gitdir:~/projects/neusta/"]
+  	path = .gitconfig-tui
+[push]
+    default = current
+[apply]
+    whitespace = fix
+[branch]
+	autosetuprebase = remote
+[alias]
+	st = status
+	amend = commit --amend
+	br = branch
+	co = checkout
+	df = diff
+	dc = diff --cached
+	lol = log --graph --decorate --pretty=oneline --abbrev-commit
+	lola = log --graph --decorate --pretty=oneline --abbrev-commit --all
+	ls = ls-files
+	rh = "!f() { git branch | sed -n '/\\* /s///p' | sed 's/^/git reset --hard origin\\//' | bash; }; f"
+	rhm = reset --hard origin/master
+	rhs = reset --hard origin/sprint
+	cp = cherry-pick
+	cpc = cherry-pick --continue
