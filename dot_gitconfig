@@ -14,11 +14,10 @@
 	defaultBranch = main
 [core]
 	autocrlf = false
-
 [merge]
 	ff = only
 [include]
-	path = ~/.config/git/gitconfig.local
+	path = ~/.config/git/gitconfig-local
 [rebase]
 	autosquash = true
 [apply]
