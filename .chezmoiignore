@@ -4,7 +4,7 @@ screenshot.png
 Documents # only manage Documents on windows
 {{- end }}
 
-{{- if eq .chezmoi.os "windows"
+{{- if eq .chezmoi.os "windows" }}
 run_once_linux.sh
 {{- end }}
 
