@@ -1,7 +1,9 @@
+My personal dotfiles managed by [chezmoi](https://www.chezmoi.io/) for Windows & Linux.
+
 Prerequisites
 -------------
 
-## [oh-my-posh](https://ohmyposh.dev/docs/linux)
+### [oh-my-posh](https://ohmyposh.dev/docs/linux)
 
 ```
 wget https://github.com/JanDeDobbeleer/oh-my-posh/releases/latest/download/posh-linux-amd64 -O ~/bin/oh-my-posh
@@ -13,13 +15,17 @@ chmod u+rw ~/.poshthemes/*.json
 rm ~/.poshthemes/themes.zip
 ```
 
-## Rust commandline tools
+### Rust commandline tools
 
 ```
 curl --proto '=https' --tlsv1.2 -sSf https://sh.rustup.rs | sh
 source $HOME/.cargo/env
 cargo install zenith exa bat fd-find procs du-dust sd ripgrep
 ```
+
+### Chocolatey (Windows only)
+
+see [install instructions](https://chocolatey.org/install)
 
 Install
 -------
