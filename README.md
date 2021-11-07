@@ -1,4 +1,4 @@
-My personal dotfiles managed by [chezmoi](https://www.chezmoi.io/) with similar prompt & commands for Windows & Linux.
+My personal dotfiles managed by [chezmoi](https://www.chezmoi.io/) with similar [oh-my-posh prompt](https://ohmyposh.dev/docs/linux) & commands for Windows & Linux.
 
 ![Screenshot with Windows Terminal](screenshot.png?raw=true "Screenshot with Windows Terminal")
 
@@ -10,7 +10,7 @@ Prerequisites
 My favorite font is [CascadiaCode](https://www.nerdfonts.com/font-downloads) which should be set as the terminal font for everything to look right.
 
 
-### [oh-my-posh](https://ohmyposh.dev/docs/linux)
+### oh-my-posh
 
 ```
 wget https://github.com/JanDeDobbeleer/oh-my-posh/releases/latest/download/posh-linux-amd64 -O ~/bin/oh-my-posh
