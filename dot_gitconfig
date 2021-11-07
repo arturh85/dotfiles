@@ -7,8 +7,8 @@
 [includeIf "gitdir:~/projects/neusta/"]
 	path = ~/.config/git/gitconfig-neusta
 [commit]
-    gpgsign = true
-    template = ~/.config/git/template-default
+	gpgsign = true
+	template = ~/.config/git/template-default
 [push]
 	default = current
 [init]
