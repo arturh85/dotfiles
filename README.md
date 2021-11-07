@@ -12,7 +12,7 @@ My favorite font is [CascadiaCode](https://www.nerdfonts.com/font-downloads) whi
 Install for Linux
 -------------------
 
-`sh -c "$(curl -fsLS git.io/chezmoi)" -- init --apply arturh85`
+- `sh -c "$(curl -fsLS git.io/chezmoi)" -- init --apply arturh85`
 
 Install for Windows
 -------------------
