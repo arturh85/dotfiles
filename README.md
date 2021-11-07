@@ -9,22 +9,6 @@ Prerequisites
 
 My favorite font is [CascadiaCode](https://www.nerdfonts.com/font-downloads) which should be set as the terminal font for everything to look right.
 
-
-### oh-my-posh
-
-```
-wget https://github.com/JanDeDobbeleer/oh-my-posh/releases/latest/download/posh-linux-amd64 -O ~/bin/oh-my-posh
-chmod +x ~/bin/oh-my-posh
-```
-
-### Rust commandline tools
-
-```
-curl --proto '=https' --tlsv1.2 -sSf https://sh.rustup.rs | sh
-source $HOME/.cargo/env
-cargo install zenith exa bat fd-find procs du-dust sd ripgrep
-```
-
 ### Chocolatey (Windows only)
 
 see [install instructions](https://chocolatey.org/install)
