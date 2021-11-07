@@ -1,10 +1,6 @@
 README.md
 screenshot.png
+
 {{- if ne .chezmoi.os "windows" }}
 Documents # only manage Documents on windows
 {{- end }}
-
-{{- if eq .chezmoi.os "windows" }}
-run_setup-linux.sh
-{{- end }}
-
