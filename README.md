@@ -9,15 +9,18 @@ Prerequisites
 
 My favorite font is [CascadiaCode](https://www.nerdfonts.com/font-downloads) which should be set as the terminal font for everything to look right.
 
-### Chocolatey (Windows only)
+Install for Linux
+-------------------
 
-see [install instructions](https://chocolatey.org/install)
+`sh -c "$(curl -fsLS git.io/chezmoi)" -- init --apply arturh85`
 
-Install
--------
+Install for Windows
+-------------------
 
-`$ sh -c "$(curl -fsLS git.io/chezmoi)" -- init --apply arturh85`
-
+- `Set-ExecutionPolicy AllSigned or Set-ExecutionPolicy Bypass -Scope Process`
+- `Set-ExecutionPolicy Bypass -Scope Process -Force; [System.Net.ServicePointManager]::SecurityProtocol = [System.Net.ServicePointManager]::SecurityProtocol -bor 3072; iex ((New-Object System.Net.WebClient).DownloadString('https://community.chocolatey.org/install.ps1'))`
+- `choco install chezmoi`
+- `chezmoi init --apply arturh85`
 
 Credits
 -------
