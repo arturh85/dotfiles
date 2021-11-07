@@ -16,21 +16,6 @@ function sudo() {
     }
 }
 
-# System Update - Update Windows, NPM, and their installed packages
-function System-Update() {
-    Write-Host "Updating Windows..." -ForegroundColor "Yellow"
-    Install-WindowsUpdate -IgnoreUserInput -IgnoreReboot -AcceptAll
-    Write-Host "Updating Modules..." -ForegroundColor "Yellow"
-    Update-Module
-    # Write-Host "Updating Help..." -ForegroundColor "Yellow"
-    # Update-Help -Force
-    Write-Host "Updating Choco Packages..." -ForegroundColor "Yellow"
-    choco update all
-    Write-Host "Updating NPM..." -ForegroundColor "Yellow"
-    npm install npm -g --loglevel error
-    npm update -g --loglevel error
-    Write-Host "Updates finished!" -ForegroundColor "Green"
-}
 
 # Reload the Shell
 function Reload-Powershell {
@@ -347,14 +332,6 @@ function Reset-AllBashShortcuts {
     ) | ForEach { Reset-BashShortcut $_ }
 }
 
-function Git-StatusOrCommand {
-    if ($args.Length -gt 0) {
-        git $args[0..$args.Length] 
-    } else { 
-        git status
-    }
-}
-
 function Convert-ConsoleColor {
     [CmdletBinding()]
     param (
@@ -372,3 +349,36 @@ function Convert-ConsoleColor {
     return [BitConverter]::ToInt32($bytes, 0)
 }
 
+# Runs 'git status' when called without arguments, otherwise calls git with given args
+function Git-StatusOrCommand {
+    if ($args.Length -gt 0) {
+        git $args[0..$args.Length] 
+    } else { 
+        git status
+    }
+}
+
+# System Update - Update Windows, NPM, and their installed packages
+function System-Update() {
+    if (!(Verify-Elevated)) {
+        Write-Host "Elevation required!" -ForegroundColor "Red"
+        return
+     }
+
+    Write-Host "Updating Windows..." -ForegroundColor "Yellow"
+    Install-WindowsUpdate -IgnoreUserInput -IgnoreReboot -AcceptAll
+    Write-Host "Updating Modules..." -ForegroundColor "Yellow"
+    Update-Module
+    # Write-Host "Updating Help..." -ForegroundColor "Yellow"
+    # Update-Help -Force
+    Write-Host "Updating Choco Packages..." -ForegroundColor "Yellow"
+    choco upgrade all --ignore-detected-reboot
+    Write-Host "Updating Rust..." -ForegroundColor "Yellow"
+    rustup update
+    Write-Host "Updating NPM..." -ForegroundColor "Yellow"
+    npm install npm -g --loglevel error
+    npm update -g --loglevel error
+    Write-Host "Updating WSL Ubuntu..." -ForegroundColor "Yellow"
+    wsl -u root bash -c "apt-get update && apt-get upgrade -y"
+    Write-Host "Updates finished!" -ForegroundColor "Green"
+}
