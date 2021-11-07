@@ -12,7 +12,7 @@ fi
 # rust
 if ! command -v cargo ; then
 	echo "Installing Rust..."
-	curl --proto '=https' --tlsv1.2 -sSf https://sh.rustup.rs | sh
+	curl https://sh.rustup.rs -sSf | sh -s -- --profile minimal --default-toolchain stable --no-modify-path
 	source ~/.cargo/env
 fi
 
