@@ -1,4 +1,4 @@
-My personal dotfiles managed by [chezmoi](https://www.chezmoi.io/) with similar [oh-my-posh prompt](https://ohmyposh.dev/docs/linux) & commands for Windows & Linux.
+My personal dotfiles managed by [chezmoi](https://www.chezmoi.io/) with similar [oh-my-posh prompt](https://ohmyposh.dev/docs/linux) & aliases for Windows & Linux.
 
 ![Screenshot with Windows Terminal](screenshot.png?raw=true "Screenshot with Windows Terminal")
 
