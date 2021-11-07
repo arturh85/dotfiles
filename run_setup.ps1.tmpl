@@ -11,11 +11,11 @@ if [ ! -f ~/bin/oh-my-posh ]; then
 fi
 
 # zsh plugins
-if [ ! -f ~/.config/zsh/zsh-autosuggestions ]; then
+if [ ! -d ~/.config/zsh/zsh-autosuggestions ]; then
     git clone https://github.com/zsh-users/zsh-autosuggestions ~/.config/zsh/zsh-autosuggestions
 fi
 
-if [ ! -f ~/.config/zsh/zsh-syntax-highlighting ]; then
+if [ ! -d ~/.config/zsh/zsh-syntax-highlighting ]; then
     git clone https://github.com/zsh-users/zsh-syntax-highlighting ~/.config/zsh/zsh-syntax-highlighting
 fi
 
