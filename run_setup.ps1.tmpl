@@ -10,6 +10,15 @@ if [ ! -f ~/bin/oh-my-posh ]; then
 	chmod +x ~/bin/oh-my-posh 
 fi
 
+# zsh plugins
+if [ ! -f ~/.config/zsh/zsh-autosuggestions ]; then
+    git clone https://github.com/zsh-users/zsh-autosuggestions ~/.config/zsh/zsh-autosuggestions
+fi
+
+if [ ! -f ~/.config/zsh/zsh-syntax-highlighting ]; then
+    git clone https://github.com/zsh-users/zsh-syntax-highlighting ~/.config/zsh/zsh-syntax-highlighting
+fi
+
 # rust
 if ! command -v cargo &> /dev/null ; then
 	echo "Installing Rust..."
