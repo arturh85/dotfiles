@@ -11,5 +11,5 @@ if ($host.Name -eq 'ConsoleHost')
     Import-Module -Name PSWindowsUpdate
 }
 
-oh-my-posh --init --shell pwsh --config $HOME\.config\ohmyposh\config.json | Invoke-Expression
+Set-PoshPrompt -Theme $HOME\.config\ohmyposh\config.json
 Clear-Host # prompt looks broken initially without cls
