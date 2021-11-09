@@ -21,11 +21,11 @@ Get-PackageProvider NuGet -Force | Out-Null
 ### Install PowerShell Modules
 Write-Host "Installing PowerShell Modules..." -ForegroundColor "Yellow"
 Set-PSRepository -Name "PSGallery" -InstallationPolicy Trusted
+
 Install-Module Terminal-Icons -Scope CurrentUser -Force
+Install-Module oh-my-posh -Scope CurrentUser -Force
 Install-Module PSReadLine -Scope CurrentUser -Force
 Install-Module PSWindowsUpdate -Scope CurrentUser -Force
-Install-Module PSWindowsUpdate -Scope CurrentUser -Force
-Install-Module oh-my-posh -Scope CurrentUser -Force
 
 # Install WSL
 wsl --install
