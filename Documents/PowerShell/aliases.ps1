@@ -69,8 +69,8 @@ Set-Alias update System-Update
 
 # Missing Bash aliases
 Set-Alias time Measure-Command
-Set-Alias l ls
-Set-Alias ll ls
+Set-Alias l Get-ChildItem
+Set-Alias ll Get-ChildItem
 Set-Alias vi nvim
 Set-Alias g Git-StatusOrCommand
 Set-Alias c chezmoi.exe

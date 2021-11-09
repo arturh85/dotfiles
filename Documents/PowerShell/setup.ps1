@@ -6,9 +6,8 @@ if (!(Verify-Elevated)) {
     return
 }
 
-### Update Help for Modules
-#Write-Host "Updating Help..." -ForegroundColor "Yellow"
-#Update-Help -Force
+Write-Host "Updating Help..." -ForegroundColor "Yellow"
+Update-Help -Force | Out-Null
 
 
 ### Package Providers
@@ -121,9 +120,7 @@ if (which npm) {
     npm install -g npm-check-updates
 }
 
-
-
-
+# Windows Settings 
 # https://github.com/jayharris/dotfiles-windows/blob/master/windows.ps1
 
 ###############################################################################

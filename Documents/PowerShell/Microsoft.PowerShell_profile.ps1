@@ -6,7 +6,10 @@
 Set-PSReadlineKeyHandler -Key Tab -Function MenuComplete
 if ($host.Name -eq 'ConsoleHost')
 {
+    Set-PSReadLineOption -Colors @{ InlinePrediction = '#000055'}
+    Set-PSReadLineKeyHandler -chord Ctrl+o -function {ViForwardChar}
     Import-Module PSReadLine
+
     Import-Module -Name Terminal-Icons
     Import-Module -Name PSWindowsUpdate
 }

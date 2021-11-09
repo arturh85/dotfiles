@@ -371,8 +371,6 @@ function System-Update() {
     
     Write-Host "Updating Modules..." -ForegroundColor "Yellow"
     Update-Module
-    # Write-Host "Updating Help..." -ForegroundColor "Yellow"
-    # Update-Help -Force
     Write-Host "Updating Choco Packages..." -ForegroundColor "Yellow"
     choco upgrade all --ignore-detected-reboot
 
