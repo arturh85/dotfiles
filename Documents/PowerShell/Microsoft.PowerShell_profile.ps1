@@ -7,7 +7,8 @@ Set-PSReadlineKeyHandler -Key Tab -Function MenuComplete
 if ($host.Name -eq 'ConsoleHost')
 {
     Set-PSReadLineOption -Colors @{ InlinePrediction = '#000055'}
-    Set-PSReadLineKeyHandler -chord Ctrl+o -function {ViForwardChar}
+    Set-PSReadLineKeyHandler -chord Ctrl+o -function ViForwardChar
+    Set-PSReadlineKeyHandler -key Ctrl+d -function ViExit
     Import-Module PSReadLine
 
     Import-Module -Name Terminal-Icons

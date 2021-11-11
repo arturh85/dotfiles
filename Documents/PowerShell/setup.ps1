@@ -49,75 +49,81 @@ if ((which cinst) -eq $null) {
 choco feature enable -n=allowGlobalConfirmation
 
 # system and cli
-choco install 7zip.install          --limit-output
-choco install chezmoi               --limit-output
-choco install curl                  --limit-output
-choco install wget                  --limit-output
-choco install wireshark             --limit-output
-choco install jq                    --limit-output
+choco install 7zip.install               --limit-output
+choco install chezmoi                    --limit-output
+choco install curl                       --limit-output
+choco install wget                       --limit-output
+choco install wireshark                  --limit-output
+choco install jq                         --limit-output
 
 # office
-choco install ferdi                 --limit-output
-choco install ditto                 --limit-output
-choco install passwordsafe          --limit-output
-choco install nextcloud-client      --limit-output
-choco install transgui              --limit-output
-choco install pidgin                --limit-output
-choco install pidgin-otr            --limit-output
-choco install barrier               --limit-output
-choco install microsoft-teams       --limit-output
-choco install nodejs.install        --limit-output
-choco install joplin                --limit-output
+choco install ferdi                     --limit-output
+choco install ditto                     --limit-output
+choco install passwordsafe              --limit-output
+choco install nextcloud-client          --limit-output
+choco install transgui                  --limit-output
+choco install pidgin                    --limit-output
+choco install pidgin-otr                --limit-output
+choco install barrier                   --limit-output
+choco install microsoft-teams           --limit-output
+choco install nodejs.install            --limit-output
+choco install joplin                    --limit-output
 
 # video editing
-choco install lossless-cut          --limit-output
+choco install lossless-cut              --limit-output
 
 # games
-choco install nvidia-display-driver --limit-output
-choco install steam                 --limit-output
-choco install epicgameslauncher     --limit-output
+choco install nvidia-display-driver     --limit-output
+choco install steam                     --limit-output
+choco install epicgameslauncher         --limit-output
 
 # system utilites
-choco install everything            --limit-output
-choco install coretemp              --limit-output
-choco install cpu-z                 --limit-output
-choco install sysinternals          --limit-output
-choco install teamviewer            --limit-output
-choco install vlc                   --limit-output
+choco install everything                --limit-output
+choco install coretemp                  --limit-output
+choco install cpu-z                     --limit-output
+choco install sysinternals              --limit-output
+choco install teamviewer                --limit-output
+choco install vlc                       --limit-output
 
 # programming languages
-choco install rustup.install        --limit-output
-choco install python3               --limit-output
-choco install golang                --limit-output
-choco install php                   --limit-output
-choco install julia                 --limit-output
-choco install composer              --limit-output
-choco install dotnet                --limit-output
+choco install rustup.install            --limit-output
+choco install python3                   --limit-output
+choco install golang                    --limit-output
+choco install php                       --limit-output
+choco install julia                     --limit-output
+choco install composer                  --limit-output
+choco install dotnet                    --limit-output
 
 # dev tools
-choco install git.install           --limit-output -params '"/GitAndUnixToolsOnPath /NoShellIntegration"'
-choco install winmerge              --limit-output
-choco install nuget.commandline     --limit-output
-choco install cmake                 --limit-output
-choco install llvm                  --limit-output
-choco install awscli                --limit-output
-choco install cuda                  --limit-output
-choco install neovim                --limit-output
-choco install neovide               --limit-output
-choco install vscode.install        --limit-output
-choco install intellijidea-ultimate --limit-output
+choco install git.install               --limit-output -params '"/GitAndUnixToolsOnPath /NoShellIntegration"'
+choco install winmerge                  --limit-output
+choco install nuget.commandline         --limit-output
+choco install cmake                     --limit-output
+choco install llvm                      --limit-output
+choco install awscli                    --limit-output
+choco install cuda                      --limit-output
+choco install neovim                    --limit-output
+choco install neovide                   --limit-output
+choco install vscode.install            --limit-output
+choco install intellijidea-ultimate     --limit-output
+choco install visualstudio2019community --limit-output
 
 # browsers
-choco install GoogleChrome          --limit-output; <# pin; evergreen #> choco pin add --name GoogleChrome        --limit-output
-choco install Firefox               --limit-output; <# pin; evergreen #> choco pin add --name Firefox             --limit-output
+choco install GoogleChrome              --limit-output; <# pin; evergreen #> choco pin add --name GoogleChrome        --limit-output
+choco install Firefox                   --limit-output; <# pin; evergreen #> choco pin add --name Firefox             --limit-output
 
 Refresh-Environment
 
 ### Node Packages
-Write-Host "Installing Node Packages..." -ForegroundColor "Yellow"
 if (which npm) {
+    Write-Host "Installing Node Packages..." -ForegroundColor "Yellow"
     npm update npm
     npm install -g npm-check-updates
+}
+
+if (which cargo) {
+    Write-Host "Installing Rust Packages..." -ForegroundColor "Yellow"
+    cargo install cargo-edit cargo-aoc bat fd-find du-dust sd ripgrep
 }
 
 # Windows Settings 
