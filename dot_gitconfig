@@ -2,13 +2,9 @@
 	name = Artur Hallmann
 	email = arturh@arturh.de
 	signingkey = BB47A259E7E7B53A
-[includeIf "gitdir:~/projects/tui/"]
-	path = ~/.config/git/gitconfig-tui
-[includeIf "gitdir:~/projects/neusta/"]
-	path = ~/.config/git/gitconfig-neusta
 [commit]
-	gpgsign = true
-	template = ~/.config/git/template-default
+    gpgsign = true
+    template = ~/.config/git/template-default
 [push]
 	default = current
 [init]
@@ -39,4 +35,8 @@
 	rhm = reset --hard origin/master
 	rhs = reset --hard origin/sprint
 	cp = cherry-pick
-	cpc = cherry-pick --continue
+    cpc = cherry-pick --continue
+[includeIf "gitdir:~/projects/tui/"]
+    path = ~/.config/git/gitconfig-tui
+[includeIf "gitdir:~/projects/neusta/"]
+    path = ~/.config/git/gitconfig-neusta
