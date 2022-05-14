@@ -61,6 +61,7 @@ if ! command -v rg &> /dev/null; then
 	echo "Installing ripgrep..."
 	cargo install ripgrep -q
 fi
+cargo install cargo-update -q
 
 {{ else if eq .chezmoi.os "windows" -}}
     

@@ -13,4 +13,5 @@ update() {
     sudo npm install npm -g --loglevel error
     sudo npm update -g --loglevel error
     rustup update
+    cargo install-update --all
 }
